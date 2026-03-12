@@ -1,0 +1,2 @@
+Name	Completeness	Contamination	Completeness_Model_Used	Translation_Table_Used	Coding_Density	Contig_N50	Average_Gene_Length	Genome_Size	GC_Content	Total_Coding_Sequences	Total_Contigs	Max_Contig_Length	Additional_Notes
+SPAdes.fasta	100.0	1.53	Neural Network (Specific Model)	11	0.877	178322	244.8267491670633	5265640	0.53	6303	1835	537432	None
