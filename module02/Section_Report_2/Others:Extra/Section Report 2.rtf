@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 0) \
+* Upload raw reads and create a paired data set;\
+* Name paired dataset 
+\f1\i Raw_Reads_3
+\f0\i0 \
+\
+1) FastQC on Raw Reads \
+* Run FastQC on 
+\f1\i Raw_Reads_3
+\f0\i0 \
+* Download the FastQC HTML report for 
+\f2\b either R1
+\f0\b0  or 
+\f2\b R2
+\f0\b0 \
+\
+2) Fastp trimming/filtering\
+* Run fastp on raw reads\
+* Keep defaults and make sure output includes the report\
+* Download the 
+\f2\b fastp report HTML
+\f0\b0  and save it in 
+\f1\i fastp/
+\f0\i0 \
+\
+3) FASTQC on trimmed reads \
+* Run 
+\f2\b FastQC
+\f0\b0  on 
+\f2\b Trimmed 
+\f0\b0 reads\
+* Download FastQC HTML report for either R1 or R2 and save it in 
+\f1\i trimmedfastqc/
+\f0\i0 \
+\
+4) Assembly (SPAdes in Galaxy)\
+* Run 
+\f2\b SPAdes
+\f0\b0  on your trimmed reads\
+* Download the 
+\f2\b contigs FASTA 
+\f0\b0 and save it in 
+\f1\i assembly/
+\f0\i0 \
+\
+5) Assembly evaluation (QUAST)\
+* Run 
+\f2\b Quast
+\f0\b0  on SPAdes contigs\
+Download 
+\f2\b QUAST PDF report only
+\f0\b0  and save it in 
+\f1\i quast/
+\f3\b \
+\
+
+\f0\i0\b0 6) Genome Quality (Check M2)\
+6A - \
+* Use 
+\f2\b Filter FASTA
+\f0\b0 \
+* Input your SPAdes untags FASTA\
+* Filter by minimum contain length: 
+\f2\b 500bp
+\f0\b0 \
+* Save filtered contigs as new dataset in 
+\f1\i filtered contigs 
+\f0\i0 \
+6B - \
+* Run 
+\f2\b Check M2
+\f0\b0  on assembly (contigs)\
+* Download CheckM2 report/output and save as 
+\f1\i checkm2/
+\f0\i0 \
+\
+7) Prokka Annotation \
+* Run 
+\f2\b Prokka
+\f0\b0  using 
+\f2\b filtered
+\f0\b0  contigs (>500bp)\
+* Change at least one setting from default as instructed\
+* Download and save these into 
+\f1\i prokka/
+\f0\i0  - 
+\f1\i .txt
+\f0\i0  - 
+\f1\i .gbk
+\f0\i0  - 
+\f1\i .ffn\
+\
+
+\f0\i0 8) 16S Species ID using BLAST (NCBI)\
+\
+9) ANI (EZBioCloud) - Two Comparisons\
+\
+10) TYGS Phylogeny (Use Filtered Contigs for this Report)\
+\
+11) Genome Mining (Day 14 Web Tools) - ALL Required\
+\
+\
+\
+}
