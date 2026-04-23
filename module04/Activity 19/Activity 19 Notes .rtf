@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red33\green36\blue51;\red33\green36\blue51;}
+{\*\expandedcolortbl;;\cssrgb\c17255\c19216\c26275;\cssrgb\c17255\c19216\c26275;}
+\margl1440\margr1440\vieww19440\viewh15000\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs27\fsmilli13600 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\
+146: fastp on collection 28: Paired-end output\
+147: fastp on collection 28: HTML report\
+148: fastp on collection 28: JSON report\
+\
+HISAT2\
+* Source for the reference genome: Use a genome from history\
+* Is this a single or paired library: Paired-end Dataset Collection\
+* Paired Collection: 146: fastp on collection 28: Paired-end output\
+* Galaxy Version 2.2.2+galaxy0\
+\
+StringTie\
+* Input Options: Short reads\
+* Input Options -> Input short mapped reads -> folder -> 173: Hisat2 on collection 146: aligned reads (BAM)\
+* Galaxy Version 2.2.3+galaxy0\
+\
+StringTie merge on dataset 181-186 and collection 180\
+* Transcripts -> Dataset collection -> 180: StringTie on Collection 173: Assembled transcripts\
+* Galaxy Version 2.2.3+galaxy0\
+\
+GffCompare\
+* GFT Inputs for comparison -> multiple datasets -> 187: Stringtie merge on dataset 181-186 and collection 180 & 2: promicromonospora.gff\
+* Galaxy Version 0.12.10+galaxy0\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs27\fsmilli13600 \cf3 \outl0\strokewidth0 featureCounts:\
+* Alignment file -> Dataset Collection -> 173: HISAT2 on collection 146: aligned reads (BAM)\
+* Gene annotation file -> locally cached -> A GFF/GTF file in your history\
+* Does the input have read pairs? -> No, Single-end -> Yes, paired-end and count them as 1 single fragment\
+* Galaxy Version 2.1.1+galaxy0\
+ \
+1) Notes\
+2) Falco output (HTML) Forward Read (120: Falco on collection 28: Webpage)\
+   * C0_5_1_S187_001\
+3) -> Falco Reverse Read \cf3 120: Falco on collection 28: Webpage)\
+   * C0_5_1_S187_001\cf3 \
+4) Fastp HTML\
+5) Samples.csv}
