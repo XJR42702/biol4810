@@ -1,0 +1,2 @@
+Input_Files	File_Genome	File_Proteins	File_Embedding
+/output/cgetools_uploads/lf/lfbXInbOckludQBuJyiMUSl53JyHFW8g/x90okh8irgr47c8w792c6fqkk4yui734/38500.assembled.fna	/output/cgetools_uploads/lf/lfbXInbOckludQBuJyiMUSl53JyHFW8g/x90okh8irgr47c8w792c6fqkk4yui734/38500.assembled.fna	/output/cgetools_output/pathogenfinder/x9/x90okh8irgr47c8w792c6fqkk4yui734/predictionPF2/preprocess_PF2/PredictedProteins.faa	/output/cgetools_output/pathogenfinder/x9/x90okh8irgr47c8w792c6fqkk4yui734/predictionPF2/preprocess_PF2/ProteinEmbeddings.h5
