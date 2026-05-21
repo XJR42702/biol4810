@@ -1,0 +1,46 @@
+Vaucheria       --------------------------------------------------------------------------------
+Macrocystis     AACCAGGCGTAGAT---CCCGTA--GAAGCTG---------------------CCSCTKYTGTTGCGGGTGAATCTTCTA
+Tetradesmus     -------------------------------------------------------------------------------A
+Porphyridium    GAGAGAGCGTTTCTTATTCTGTATTGAAGGTACTAACCGTGCTGTTGCAGCTTCAGGTGAAGTTAAAGGTCACTATTTAA
+                                                                                                
+
+
+Vaucheria       --------------------------------------------------------------------------------
+Macrocystis     CTGCAACATGGACGG-TAGTTTGGACAGACTTATTAACTGCTTGCGATATCTATAGAGCAAAAGCATATAGAGTAGATCC
+Tetradesmus     CCGTTACAAAGGTCG-T----------------------------------------------TGTTACGATATCGAGCC
+Porphyridium    ATGTAAC-TG--CTGCTACTCAAGA-AGA--TATGTAC-------GAGCGT-GCAGAGTT--TGCTAAAGAAGTTG--GC
+                                                                                                
+
+
+Vaucheria       ---ATTGTA---ATGATTGATCTTGTAATTGGTTATACTGCTATTCA-ATCTATGTCAATTTGGGCTAGAAAAGCTGATA
+Macrocystis     AGTACCTGGAA--CAAGCGACCAATTCTTTGCATATATTGCTTATGAATGTG--ATTTATTTGAAGAAGGTTCTCTTGCG
+Tetradesmus     GGTTCCAGGTG--AAGACAACCAATACATTGCTTATGTAGCTTACCCTATCG--ACCTTTTTGAAGAAGGATCAGTAACT
+Porphyridium    AGTATTATATGCATGATTGACTTAGTAATCGGTTATACTGCAATTCA-AACTATGGCTAAATGGGCACGTAAAAATGATA
+                                   *        * *  ***   **                    **     *      *    
+
+
+Vaucheria       TGATTTTACATTTACACCGTGCAGGTAATTCTACATATGCACGTCAAAAAAATCATGGTATTAATTTCCGTGTAATTTGT
+Macrocystis     AATTTAACAGCTTCTATTATT--GGTA-----ACGTTTTCG-GTTTTAAAGCTGTTAAAG---CTTTACGTCTAGAAGAC
+Tetradesmus     AACTTATTCACTTCAATCGTA--GGAA-----ACGTATTTG-GTTTCAAAGCTCTTCGTG---CATTACGTTTAGAAGAT
+Porphyridium    TGATTCTTCATTTACACCGTGCTGGTAACTCTACATATTCTCGTCAAAAAAATCACGGTATGAATTTCCGTGTAATTTGT
+                   **      **  *   *   ** *     ** * *    **   ***  *            ** *** **      
+
+
+Vaucheria       AAATGGATGCGTATGGCTGGTGTCGATCACATTCATGCTGGTACTGTTGTAGGAAAATTAGAAGGCGATCCTTTAATGGT
+Macrocystis     ATGAGAATTCCTTTTGCTTACTTAAAAACTTTCC-AA--GGTCCAGCTACTGGTGTA----ATTGTGGAAAGAGAAAGAT
+Tetradesmus     TTACGTATCCCTCCTGCTTACGTTAAAACATTCC-AA--GGACCTCCACATGGTATT----CAGGTTGAACGTGACAAAT
+Porphyridium    AAGTGGATGCGTATGGCAGGTGTTGACCATATTCATGCTGGTACTGTAGTAGGTAAATTAGAAGGGGATCCTTTAATGAT
+                    * ** * *   **     *  *     * *     **  *       **           *         *    *
+
+
+Vaucheria       TAAAGGCTTTTATAATACGTTATTATTAACTAAATTAGAAATTAATCTTTCTCAAGGTGTATTTTTTGAAATGGATTGGG
+Macrocystis     TAGACACATTTGGA---CGT------------------------------------------------------------
+Tetradesmus     TAAACAAATATGGT---CGTGG---TT----------------------TATTAGGTTGTACAATTAAACCTAAATTAGG
+Porphyridium    TAAAGGTTTCTATAACACTTTACT--------------------------------------------------------
+                ** *    * *      * *                                                            
+
+
+Vaucheria       CAGCATTACGTAAAACTGTACCAGTAGCATCTGGTGGTATTCAC--TGTGGACAATTACATCAATTA
+Macrocystis     ------------------------------------------------------------------A
+Tetradesmus     TTTATCAGCTAAAAACTATGGACGTGCTGTTTATGAATGTTTACGTGGTGG-------TTTAGACTT
+Porphyridium    ------------------------------------------------------------------A

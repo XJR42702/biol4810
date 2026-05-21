@@ -1,0 +1,1 @@
+(((Vaucheria litorea:0.08500,Porphyridium purpureum:0.06500):0.29500,Macrocystis pyrifera:0.18500):0.00000,Tetradesmus obliquus:0.18500);
