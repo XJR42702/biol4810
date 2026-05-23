@@ -1,0 +1,518 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww9340\viewh14820\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Section Report 4: Pseudomonas Transcriptome\
+\
+Using Galaxy EU\
+\
+1) Import your data as a new history\
+\
+2) Falco (Galaxy Version 1.3.0+galaxy0)\
+Tool Parameters:\
+	2.1) Select Dataset collection\
+	2.2) Use the reads\
+	2.3) Run tool\
+Downloads\
+	1) Select \'93
+\f1\i Falco on Collection 28: Webpage
+\f0\i0 \'94 (the one that says \'93a list with 6 html pairs\'94)\
+	2) select the first option (for me, it\'92s \'93
+\f1\i SRR25635763
+\f0\i0 \'94)\
+	3) download the Forward html\
+\
+3) FastP (Galaxy Version 1.3.3+galaxy0)\
+Tool Parameters:\
+	3.1) Change the \'93
+\f1\i Single-End or Paired-End
+\f0\i0 \'94 option to \'93
+\f1\i Paired Collection
+\f0\i0 \'94\
+	3.2) For the \'93
+\f1\i Select paired collection(s)*
+\f0\i0 \'94, use the \'93
+\f1\i 28: reads
+\f0\i0 \'94 option\
+\
+4) HISAT2 (Galaxy Version 2.2.2+galaxy0)\
+Tool Parameters\
+	4.1) For 
+\f1\i Source for the reference genome, 
+\f0\i0 change it to 
+\f1\i Use a genome from history
+\f0\i0 \
+	4.2) For 
+\f1\i Select the reference genome
+\f0\i0 , select 
+\f1\i single dataset 
+\f0\i0 (the page option), then select 
+\f1\i 14: pseudomonas.fna\
+
+\f0\i0 	4.3) For the 
+\f1\i Is this a single or paired library
+\f0\i0 , change it to 
+\f1\i Paired-end Dataset Collection\
+\
+
+\f0\i0 5) StringTie (Galaxy Version 2.2.3+galaxy0)\
+Tool Parameter\
+	5.1) Under 
+\f1\i Input Options
+\f0\i0 , select 
+\f1\i Dataset Collections 
+\f0\i0 (the folder), and run it on 
+\f1\i 82: HISAT2 on Collection 55: aligned reads (BAM)
+\f0\i0 \
+	5.2) For 
+\f1\i Use a reference file to guide assembly?
+\f0\i0 , select 
+\f1\i Use reference GTF/GFF3
+\f0\i0 \
+		5.2.2) Further under 
+\f1\i Use a reference file to guide assembly?
+\f0\i0 , there\'92s a section that says 
+\f1\i Reference file
+\f0\i0 . For this part, switch from 
+\f1\i Use a built-in file
+\f0\i0  to 
+\f1\i Use a file from history
+\f0\i0 . \
+		5.2.3) Under the 
+\f1\i GTF/GFF3 dataset to guide assembly
+\f0\i0 , select the 
+\f1\i single dataset
+\f0\i0  option (the single page), and use 
+\f1\i 13: pseudomonas.gff\
+\
+
+\f0\i0 6) StringTie Merge (Galaxy Version 2.2.3+galaxy0)\
+Tool Parameters\
+	6.1) When you select 
+\f1\i StingTie Merge
+\f0\i0 , it\'92ll automatically populate with 
+\f1\i Multiple Datasets
+\f0\i0  and 
+\f1\i 13: pseudomonas.gff
+\f0\i0 . To change this to the correct option, simply click the 
+\f1\i x
+\f0\i0  next to 
+\f1\i 3: pseudomonas.gff
+\f0\i0 , then drag 
+\f1\i 89: StringTie on Collection 82: Assembled Transcripts
+\f0\i0 . This should change the 
+\f1\i Transcripts
+\f0\i0  section to 
+\f1\i Dataset Collectio
+\f0\i0  with 
+\f1\i 89: StringTie on Collection 82: Assembled transcripts
+\f0\i0 \
+	6.2) Under the 
+\f1\i Reference annotation to include in the merging
+\f0\i0 , select 
+\f1\i Single Dataset
+\f0\i0 , then
+\f1\i 13: pseudomonas.gff\
+\
+
+\f0\i0 7) GFF Compare (Galaxy Version 0.12.10+galaxy0)\
+Tool Parameter\
+	7.1) For 
+\f1\i GTF inputs for comparison
+\f0\i0 , select 
+\f1\i multiple dataset
+\f0\i0 , then select BOTH 
+\f1\i 96: StringTie merge on dataset 13 and 90-95 and collection 89
+\f0\i0  AND 
+\f1\i 13: pseudomonas.gff\
+\
+
+\f0\i0 8) FeatureCounts (Galaxy Version 2.1.1+galaxy0)\
+Tool Parameters\
+	8.1) Under 
+\f1\i Alignment file
+\f0\i0 , select 
+\f1\i Dataset Collection
+\f0\i0 , then select 
+\f1\i 82: HISAT2 on collection 55: aligned reads (BAM)
+\f0\i0 \
+	8.2) Under 
+\f1\i Gene annotation file
+\f0\i0 , change 
+\f1\i locally cached
+\f0\i0  to 
+\f1\i A GFF/GTF file in your history
+\f0\i0 \
+	8.3) Right under 
+\f1\i Gene annotation file
+\f0\i0 , there\'92s another 
+\f1\i Gene Annotation file
+\f0\i0 . For that, select 
+\f1\i single dataset
+\f0\i0 , then select 
+\f1\i 112: GffCompare on dataset 13 and 96: combined transcripts
+\f0\i0 \
+	8.4) Again under 
+\f1\i Gene annotation file
+\f0\i0 , there\'92s 
+\f1\i GFF gene identifier
+\f0\i0 . Change 
+\f1\i gene_id
+\f0\i0  to 
+\f1\i transcript_id
+\f0\i0 \
+
+\f1\i 	
+\f0\i0 8.5) For the 
+\f1\i Does the input have read pairs?
+\f0\i0 , change that to 
+\f1\i Yes, paired-end and count them as 1 single fragment.
+\f0\i0  \
+\
+9) Unlocking the Hidden Stuff\
+	9.1) Select the 
+\f1\i eye
+\f0\i0  option that has a line through it. This will show all the hidden data. \
+	9.2) Select the 
+\f1\i Feature counts on dataset 88 and 112: Counts
+\f0\i0 , and select the pencil icon (
+\f1\i edit attributes
+\f0\i0 )\
+		9.2.1) For this section, you need to look at your CSV file and edit the name depending on what the CSV file says. For my stuff, it\'92ll be 
+\f1\i Mutant/Wildtype 1/2/3
+\f0\i0 .
+\f1\i \
+\
+
+\f0\i0 10) DESeq2 (Galaxy Version 2.11.40.8+galaxy2)\
+Tool Parameters\
+	10.1) 1: Factor\
+		10.1.1) Under 
+\f1\i 1: Factor
+\f0\i0 , change 
+\f1\i FactorName
+\f0\i0  from 
+\f1\i Specify a factor name, e.g. effects_drug_x or cancer_markers
+\f0\i0  to 
+\f1\i Condition\
+		
+\f0\i0 10.1.2) Further under 
+\f1\i 1: Factor
+\f0\i0 , there\'92s 
+\f1\i Factor level
+\f0\i0 . Under that, there\'92s 
+\f1\i Specify a factor level, typical values could be \'91tumors\'92, \'91normal\'92, \'91treated\'92 or \'91control\'92
+\f0\i0 . Change the 
+\f1\i FactorLevel
+\f0\i0  to 
+\f1\i WildType
+\f0\i0 \
+		10.1.3) For the 
+\f1\i counts file(s)
+\f0\i0 , remove whatever automatically populated and drag all three WiildTypes to there. 
+\f1\i \
+	
+\f0\i0 10.2) 
+\f1\i 2: Factor Level
+\f0\i0 \
+		10.2.1) Basically, do everything you did for instructions 10.1, but use the mutants instead. \
+	10.3) for 
+\f1\i Advanced options
+\f0\i0 , select 
+\f1\i Yes
+\f0\i0  for 
+\f1\i Use beta priors
+\f0\i0 \
+	10.4) For 
+\f1\i Output options
+\f0\i0 , select BOTH 
+\f1\i General plots for visualizing the analysis results
+\f0\i0  AND 
+\f1\i Output normalized counts
+\f0\i0 \
+\
+11) Filter (Galaxy Version 1.1.1)\
+Tool Parameters\
+	11.1) Under 
+\f1\i Filter
+\f0\i0 , select 
+\f1\i single dataset
+\f0\i0 , then select 
+\f1\i 132: DESeq2 result file on dataset 120, 122, and others\
+	
+\f0\i0 11.2) change 
+\f1\i With following condition
+\f0\i0 , to 
+\f1\i c7<0.05\
+\
+
+\f0\i0 12) Filter (Galaxy Version 1.1.1)\
+Tool Parameters\
+	12.1) Under 
+\f1\i Filter
+\f0\i0 , select 
+\f1\i single dataset
+\f0\i0 , then select 
+\f1\i 135: Filter on dataset 132
+\f0\i0  (the dataset made from the previous filter)
+\f1\i \
+	
+\f0\i0 12.2) change 
+\f1\i With following condition
+\f0\i0 , to 
+\f1\i abs(c3)>1\
+\
+
+\f0\i0 13) Making a new header\
+	13.1) Open a new plain text doc\
+	13.2) Make the headers GeneID, Base Mean, Log2(FC), StdErr, Walt-Stats, P-value, & P-adj.\
+		13.2.1) separate them by using the 
+\f1\i Tab
+\f0\i0  key.
+\f1\i \
+\
+
+\f0\i0 14) Adding new header to Galaxy\
+	14.1) Select 
+\f1\i Upload
+\f0\i0 \
+	14.2) Select 
+\f1\i Paste/Fetch data\
+	
+\f0\i0 14.3) Copy/Paste the info from the header you created into the empty text space.\
+	14.4) Change the title from 
+\f1\i New File
+\f0\i0  to 
+\f1\i Header
+\f0\i0 \
+	14.5) Change 
+\f1\i Auto-detect
+\f0\i0  to 
+\f1\i tabular\
+	
+\f0\i0 \
+15) Concatenate multiple datasets or collections (Galaxy Version 1.0.0)\
+NOTE: Do this step really fast because the header is going to end up turning red randomly :(\
+Tool Parameters:\
+	15.1) For 
+\f1\i Concatenate Dataset
+\f0\i0 , use 
+\f1\i Header 
+\f0\i0 (the header we just made)\
+	15.2) Under 
+\f1\i Dataset
+\f0\i0 , select 
+\f1\i 136: Filter on dataset 135
+\f0\i0  (the one right before the volcano plot)\
+Downloads:\
+15.1) Download 
+\f1\i 141: Concatenate multiple datasets or collections on dataset 136
+\f0\i0  (the one right before volcano plot stuff)\
+\
+16) Volcano Plot (Galaxy Version 4.0.3+galaxy0)\
+Tool Parameters\
+	16.1) Under 
+\f1\i Specify an input file
+\f0\i0 , select 
+\f1\i single dataset
+\f0\i0 , then select 
+\f1\i 144: Concatenate multiple datasets or collections on dataset 136 & 143
+\f0\i0  (the most recent one we made)\
+	16.2) 
+\f1\i File has header?\
+
+\f0\i0 		16.2.1) 
+\f1\i FDR (adjusted P value) column number
+\f0\i0  from 
+\f1\i Column: 1 
+\f0\i0  to 
+\f1\i Column: 7\
+
+\f0\i0 		16.2.2) 
+\f1\i P value (raw) column number
+\f0\i0  from 
+\f1\i Column: 1 
+\f0\i0  to 
+\f1\i Column: 6
+\f0\i0 \
+		16.2.3) 
+\f1\i Log Fold Change column number
+\f0\i0  from 
+\f1\i Column: 1 
+\f0\i0  to 
+\f1\i Column: 3
+\f0\i0 \
+		16.2.4) Keep 
+\f1\i Labels column number
+\f0\i0  as 
+\f1\i Column: 1\
+
+\f0\i0 Download:\
+	16.1) Download the image
+\f1\i \
+\
+
+\f0\i0 17) Excel Stuff\
+	17.1) Open 
+\f1\i 141: Concatenate multiple datasets or collections on dataset 136
+\f0\i0  (the one right before volcano plot stuff) using excel\
+	17.2) Select all the data using 
+\f1\i Ctrl A
+\f0\i0 , then go to 
+\f1\i data
+\f0\i0 , then 
+\f1\i Filter & Sort
+\f0\i0 , and then select the 
+\f1\i up/down arrows
+\f0\i0  next to 
+\f1\i value
+\f0\i0  and click 
+\f1\i log2 (FC)
+\f0\i0 \
+	17.3) After sorting by Log2 (FC), delete all the rows inbetween the top & bottom 10. \
+	17.4) Download the new dataset and upload it into galaxy\
+\
+18) Join two datasets (Galaxy Version 2.1.3)\
+Tool Parameters\
+	18.1) Under 
+\f1\i Join
+\f0\i0 , select 
+\f1\i 146: Top_Bott_10.csv (as tabular) 
+\f0\i0 (the one we just uploaded)\
+	18.2) under 
+\f1\i with
+\f0\i0 , select 
+\f1\i 134: Normalized counts file on dataset 120, 122, and others
+\f0\i0 \
+	18.3) At the bottom, before 
+\f1\i Additional Options
+\f0\i0 , for 
+\f1\i Keep the Header lines
+\f0\i0  change it to say 
+\f1\i yes
+\f0\i0 . 
+\f1\i  
+\f0\i0 \
+\
+19) Cut (Galaxy Version 1.0.2)\
+Tool Parameters\
+	19.1) For 
+\f1\i Cut Columns
+\f0\i0 , change it to c8-c14\
+	19.2) For 
+\f1\i From
+\f0\i0 , make sure it says 
+\f1\i 148: Join Datasets on dataset 134 and 146\
+\
+
+\f0\i0 20) Heatmap2 (Galaxy Version 3.3.0+galaxy0)\
+Tool Parameters\
+	20.1) Using single dataset, make sure it\'92s the 
+\f1\i 149: Cut on dataset 148
+\f0\i0 , the one we just made\
+	20.2) 
+\f1\i Under data transformation
+\f0\i0 , change it to 
+\f1\i Log2(value+1) transform my data
+\f0\i0 \
+		NOTE: You can change the color if you want :)\
+\
+21) Filter (Galaxy Version 1.1.1)\
+Tool Parameters\
+	21.1) Under 
+\f1\i Filter
+\f0\i0 , using the 
+\f1\i single dataset
+\f0\i0 , select the 
+\f1\i 13: pseudomonas.gff
+\f0\i0  file (one of the very first files)\
+	21.2) Under 
+\f1\i With following condition
+\f0\i0 , change it to \'93\'91
+\f1\i c3==CDS\'92
+\f0\i0 \'94\
+		NOTE: You HAVE to use two equal signs\
+\
+22) Convert (Galaxy Version 1.0.1)\
+Tool Parameters\
+	22.1) Where it says 
+\f1\i Convert all*
+\f0\i0 , change it to say 
+\f1\i Semicolons\
+
+\f0\i0 \
+23) Replace Text (Galaxy Version 9.5+galaxy3)\
+Tool Parameters\
+	23.1) Under the replacement section, in the 
+\f1\i in column
+\f0\i0  section, change it to 
+\f1\i Column: 2
+\f0\i0 \
+	23.2) Further in the 
+\f1\i Replacement
+\f0\i0  section, for 
+\f1\i Find pattern
+\f0\i0 , change it to say \'93
+\f1\i Parent=
+\f0\i0 \'94\
+\
+24) Cut (Galaxy Version 1.0.2)\
+Tool Parameters\
+	24.1) Under 
+\f1\i cut columns
+\f0\i0 , change it to \'93c2,c8\'94\
+	24.2) On the 
+\f1\i From
+\f0\i0 , make sure its done on 
+\f1\i 157: Filter on dataset 157
+\f0\i0  (the one just made)\
+\
+25) Join two datasets (Galaxy Version 2.1.3)\
+Tool Parameters\
+	25.1) Under 
+\f1\i Join
+\f0\i0 , use 
+\f1\i Single Dataset
+\f0\i0 , and make sure it says 
+\f1\i 159: Cut on dataset 158
+\f0\i0  (the one previously made)\
+	25.2) Under 
+\f1\i with
+\f0\i0 , using 
+\f1\i single dataset
+\f0\i0 , use 
+\f1\i 146: Top_Bott_10.csv (as tabular)
+\f0\i0 \
+	25.3) Under 
+\f1\i Keep the header line
+\f0\i0 , change it to 
+\f1\i Yes
+\f0\i0 .\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
